@@ -1,0 +1,28 @@
+# TMUX config, terminal multiplexer.
+# Maintainer:	 Jessee Chan <CYPHER0@foxmail.com>
+# Last Change: 2023.05.05
+
+
+set-hook -g window-renamed \
+  " \
+  run -b ~/.config/tmux/hook/key.sh     \;  \
+  run -b ~/.config/tmux/hook/color.sh   \;  \
+  "
+
+set-hook -g pane-focus-in \
+  " \
+  run -b ~/.config/tmux/hook/key.sh     \;  \
+  run -b ~/.config/tmux/hook/color.sh   \;  \
+  run -b ~/.config/tmux/hook/status.sh  \;  \
+  "
+
+set-hook -g pane-exited \
+  " \
+  run -b ~/.config/tmux/hook/key.sh     \;  \
+  run -b ~/.config/tmux/hook/color.sh   \;  \
+  run -b ~/.config/tmux/hook/status.sh  \;  \
+  "
+
+
+
+

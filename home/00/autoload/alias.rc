@@ -1,0 +1,21 @@
+# Autoload config,
+# Maintainer:	 Jessee Chan <CYPHER0@foxmail.com>
+# Last Change: 2023.11.28
+
+
+# shopt -s expand_aliases
+
+alias fi='fish'
+alias vi='nvim'
+alias ra='ranger'
+
+alias py='~/venv/bin/python'
+alias pipv='~/venv/bin/pip'
+
+alias wpsw='wps'
+alias wpse='et'
+alias wpsp='wpp'
+
+alias get_idf='. $HOME/esp/esp-idf/export.sh'
+
+

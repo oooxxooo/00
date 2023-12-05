@@ -1,0 +1,20 @@
+[Unit]
+Description=autoboot
+
+[Service]
+Type=oneshot
+ExecStart=/home/00/00/autoboot.sh
+
+[Install]
+WantedBy=multi-user.target
+
+
+# [Unit]
+# Description=Change keycodes at boot
+#
+# [Service]
+# Type=oneshot
+# ExecStart=/usr/bin/setkeycodes [scancode] [keycode] [scancode] [keycode] [...]
+#
+# [Install]
+# WantedBy=multi-user.target

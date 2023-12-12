@@ -3,8 +3,13 @@
 -- Last Change: 2023.07.15
 
 
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "TelescopeResults",
+  command = "setlocal nofoldenable",
+})
+
 -- require('telescope').load_extension('media_files')
--- require'telescope'.setup {
+-- require('telescope').setup{
 --   extensions = {
 --     media_files = {
 --       -- filetypes whitelist
@@ -14,6 +19,9 @@
 --       find_cmd = "rg"
 --     }
 --   },
---   }
+-- }
+
+
+
 
 

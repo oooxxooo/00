@@ -28,7 +28,7 @@ function set_monitor {
         xrandr --output ${DEVS[$i]} --scale 1 --mode ${MODES[$i]} --rate ${RATES[$i]}
       else echo $i 'exteral'
         # xrandr --output ${DEVS[$i]} --mode ${MODES[$i]} --scale 1
-        xrandr --output ${DEVS[$i]} --scale 1 --mode ${MODES[$i]} --rate ${RATES[$i]} --left-of ${DEVS[i-1]}
+        xrandr --output ${DEVS[$i]} --scale 1 --mode ${MODES[$i]} --rate ${RATES[$i]} --right-of ${DEVS[i-1]} --rotate left
       fi
       done
   fi

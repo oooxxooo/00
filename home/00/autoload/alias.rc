@@ -12,9 +12,10 @@ alias ra='ranger'
 alias py='~/venv/bin/python'
 alias pipv='~/venv/bin/pip'
 
-alias wpsw='wps'
-alias wpse='et'
-alias wpsp='wpp'
+alias  pdf='wpspdf'
+alias wpsw='wpsw'
+alias wpss='wpss'
+alias wpsp='wpsp'
 
 alias get_idf='. $HOME/esp/esp-idf/export.sh'
 

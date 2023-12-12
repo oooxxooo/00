@@ -3,7 +3,10 @@
 # Last Change: 2023.11.28
 
 
-# fcitx config,
+# nodejs
+# export NODE_OPTIONS=--openssl-legacy-provider
+
+# fcitx
 export XMODIFIERS=@im=fcitx
 export QT_IM_MODULE=fcitx
 export GTK_IM_MODULE=fcitx

@@ -10,6 +10,7 @@ require('lazy-nvim')
 require('script.plugdown')
 require('plugin.mason')
 require('plugin.cmp')
+require('plugin.telescope')
 
 require('keymap.normal')
 require('keymap.visual')

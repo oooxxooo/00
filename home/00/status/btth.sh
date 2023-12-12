@@ -4,12 +4,10 @@
 # bluetooth
   IFS=$'\n'
   BT_LIST=(
-    '\n # 88:2D:53:20:4A:02 # xiaodu-A3-6081          '
     '\n # 60:F4:3A:A6:B3:45 # EDIFIER Lolli Pods Plus '
     )
+    # '\n # 88:2D:53:20:4A:02 # xiaodu-A3-6081          '
     # '\n # 99:E6:44:5B:A6:0F # Bluetooth Amp           '
-    # '\n 88:2D:53:20:4A:02 # xiaodu-A3-6081            '
-    # '\n 04:7A:0B:4E:55:E8 # Mi Soundbar               '
   # echo -e ${#BT_LIST[@]} ${BT_LIST[@]}
 
 # bluetooth

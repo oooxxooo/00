@@ -17,6 +17,8 @@ alias wpsw='wpsw'
 alias wpss='wpss'
 alias wpsp='wpsp'
 
+alias bdnd='/home/progarm/baidunetdisk/opt/baidunetdisk/baidunetdisk'
+
 alias get_idf='. $HOME/esp/esp-idf/export.sh'
 
 

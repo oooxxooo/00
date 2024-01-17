@@ -26,10 +26,10 @@ local function mapfn()
   elseif ext == 'rc'   then
     vim.o.filetype = 'sh'
     vim.cmd[[ silent ! ~/.config/nvim/exe/bsh.sh % & ]]
-  elseif ext == 'bsh'   then
+  elseif ext == 'bsh'  then
     vim.o.filetype = 'bash'
     vim.cmd[[ silent ! ~/.config/nvim/exe/bsh.sh % & ]]
-  elseif ext == 'dsh'   then
+  elseif ext == 'dsh'  then
     vim.o.filetype = 'dash'
     vim.cmd[[ silent ! ~/.config/nvim/exe/dsh.sh % & ]]
   elseif ext == 'py'   then

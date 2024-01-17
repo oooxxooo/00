@@ -1,0 +1,17 @@
+# ALACRITTY config, color
+
+
+[colors]
+  primary        = { background = '#202020', foreground = '#ffffff' }
+  cursor         = { text = "CellBackground", cursor = "CellForeground" }
+  vi_mode_cursor = { text = "CellBackground", cursor = "CellForeground" }
+
+[colors.normal]
+  red     = '#c06060'  #ff0000  #c06060
+  yellow  = '#c0c060'  #ffff00  #c0c060
+  green   = '#60c060'  #00ff00  #60c060
+  cyan    = '#60c0c0'  #00ffff  #60c0c0
+  blue    = '#6060c0'  #0000ff  #6060c0
+  magenta = '#c060c0'  #ff00ff  #c060c0
+
+

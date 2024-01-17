@@ -20,8 +20,11 @@
   # sudo rsync $OPT $SRC $DST
   for s in ${SRCS[@]}
   do
-    echo $s $DST
+    echo " rsync $s $DST "
+    sudo chown -R root:root $s
+    sudo chmod -R 755       $s
     sudo rsync $OPT $s $DST
+    echo -e "-----"
     # rsync $OPT $s $DST
   done
   echo -------------------

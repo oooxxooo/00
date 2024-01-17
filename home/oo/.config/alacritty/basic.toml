@@ -1,0 +1,21 @@
+# ALACRITTY config,
+
+
+[env]
+  TERM = "alacritty"
+
+[shell]
+  program = "/bin/bash"
+  args = ["-l"]
+
+[scrolling]
+  history = 10000
+
+[mouse]
+  hide_when_typing = true
+
+[bell]
+  animation = EaseOutExpo
+  duration = 0
+
+

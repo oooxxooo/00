@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 
 
-LIST='
-  # AA | UEFI   | rw,uid=1000,dmask=0007,fmask=0007
-  # BB | VTOY   | rw,uid=1000,dmask=0007,fmask=0007
-  # CC | WINS   | rw,uid=1000,dmask=0007,fmask=0007
-  # DD | BATO   | rw,uid=1000,dmask=0007,fmask=0007
+LIST="
+  # AA | UEFI   | rw,uid=$EUID,dmask=0007,fmask=0007
+  # BB | VTOY   | rw,uid=$EUID,dmask=0007,fmask=0007
+  # CC | WINS   | rw,uid=$EUID,dmask=0007,fmask=0007
+  # DD | BATO   | rw,uid=$EUID,dmask=0007,fmask=0007
   # EE | CERA   | rw
-  # HH | HOME   | rw
-  # OA | VBOX01 | rw,uid=1000,dmask=0007,fmask=0007
-  '
+  # HH | DATA   | rw
+  # OA | VBOX01 | rw,uid=$EUID,dmask=0007,fmask=0007
+  "
 
 ROOT='/0000'
   SWAP='.swapfile'
@@ -96,8 +96,8 @@ function mkd_part {
   echo mkdir
   if [ $ISMKD -eq 0 ]; then return; fi
   for i in ${!PREFIXS[@]}; do
-    echo " mkdir $ROOT/${PREFIXS[i]}¦${LABELS[i]} "
-    sudo mkdir "$ROOT/${PREFIXS[i]}¦${LABELS[i]}"
+    echo   " mkdir $ROOT/${PREFIXS[i]}¦${LABELS[i]} "
+    sudo mkdir -p "$ROOT/${PREFIXS[i]}¦${LABELS[i]}"
     done
   }
 
@@ -108,9 +108,9 @@ function mnt_part {
   for i in ${!PREFIXS[@]}; do
     if [ ${PARTS[i]} = '#####' ]; then continue; fi
     if [ ${MNTS[i]} != '#####' ]; then continue; fi
-    echo " mount ${PARTS[i]} " "$ROOT/${PREFIXS[i]}¦${LABELS[i]}"
-    sudo mount \
-      "${PARTS[i]}" "$ROOT/${PREFIXS[i]}¦${LABELS[i]}" \
+    echo " mount -L ${LABELS[i]} $ROOT/${PREFIXS[i]}¦${LABELS[i]} "
+    sudo mount --onlyonce \
+      -L "${LABELS[i]}" "$ROOT/${PREFIXS[i]}¦${LABELS[i]}" \
       -o "${OPTIONS[i]}"
     done
   }
@@ -129,12 +129,12 @@ get_var
 mkd_part
 get_var
 mnt_part
-echo ===================
+echo =======================================
 set_nbd
 set_var
 get_var
 mnt_part
-echo ===================
+echo =======================================
 mnt_swap
 
 

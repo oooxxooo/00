@@ -9,6 +9,7 @@ xset s     300
 
 # standby suspend off
 xset dpms  600 900 900
+# xset dpms  5 900 900
 
 # xterm
 xrdb       -merge ./xterm.conf

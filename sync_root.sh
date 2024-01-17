@@ -11,7 +11,7 @@
   echo --------------------
 
 # sync
-  sudo rsync $OPT $SRC $DST
+  # sudo rsync $OPT $SRC $DST
 
 
 
